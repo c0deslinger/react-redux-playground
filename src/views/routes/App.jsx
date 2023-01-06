@@ -8,6 +8,7 @@ import ErrorPage from "../pages/ErrorPage";
 import LoginPage from "../pages/LoginPage";
 import { connect } from "react-redux";
 import { getUserRoleCodes } from "../../store/ducks/auth/selectors";
+import CatalogPage from "../pages/CatalogPage";
 
 const route = createBrowserRouter([
     {
@@ -23,10 +24,14 @@ const route = createBrowserRouter([
       path: "/dashboard",
       element: <Dashboard />
     },
+    {
+      path: "/catalog",
+      element: <CatalogPage />
+    },
   ]);
 
   const App = ({ getUserRoles }) => {
-    const mappingRoleCode = getUserRoles?.includes('10') || getUserRoles?.includes('11') || getUserRoles?.includes('13');
+    // const mappingRoleCode = getUserRoles?.includes('10') || getUserRoles?.includes('11') || getUserRoles?.includes('13');
   
     return <RouterProvider router={route} />
   }
