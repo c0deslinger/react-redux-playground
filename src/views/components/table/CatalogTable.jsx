@@ -1,5 +1,7 @@
 import React from 'react';
 import { Table } from 'antd';
+import {IoMdOpen} from 'react-icons/io'
+
 const columns = [
   {
     title: 'Nama Project',
@@ -80,7 +82,7 @@ const columns = [
     key: 'action',
     width: 20,
     fixed: 'right',
-    render: () => <a href>action</a>
+    render: () => <a href="/documents/ewp"><IoMdOpen /></a>
   },
 ];
 const data = [];

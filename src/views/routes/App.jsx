@@ -9,6 +9,7 @@ import LoginPage from "../pages/LoginPage";
 import { connect } from "react-redux";
 import { getUserRoleCodes } from "../../store/ducks/auth/selectors";
 import CatalogPage from "../pages/CatalogPage";
+import ListDocumentEwpPage from "../pages/ewp/ListDocumentEwpPage";
 
 const route = createBrowserRouter([
     {
@@ -27,6 +28,10 @@ const route = createBrowserRouter([
     {
       path: "/catalog",
       element: <CatalogPage />
+    },
+    {
+      path: "/documents/ewp",
+      element: <ListDocumentEwpPage />
     },
   ]);
 
