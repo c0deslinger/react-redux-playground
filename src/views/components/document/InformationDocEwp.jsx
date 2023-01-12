@@ -22,23 +22,27 @@ export default function InformationDocEwp(){
         }
         return (<>
          <div className='w-1/2' >
-                <InfoRow keyName="Nama Project" value="John Doe" />
-                <InfoRow keyName="Kantor Audit" value="Kantor Audit 1" />
-                <InfoRow keyName="Tipe Audit" value="Reguler" />
-                <InfoRow keyName="Tahun Audit" value="2022" />
-                <InfoRow keyName="Triwulan" value="1" />
-                <InfoRow keyName="Periode" value="11/12/2022 - 22/12/2022" />
-                <InfoRow keyName="Object Audit" value="Object Audit A" />
-                <InfoRow keyName="Tim Audiot" value="Tim Warriors" />
-                <InfoRow keyName="Auditee" value="Auditee Kota A" />
-                <InfoRow keyName="Adendum" value="I" />
-            </div>
+            <InfoRow keyName="Nama Project" value="John Doe" />
+            <InfoRow keyName="Kantor Audit" value="Kantor Audit 1" />
+            <InfoRow keyName="Tipe Audit" value="Reguler" />
+            <InfoRow keyName="Tahun Audit" value="2022" />
+            <InfoRow keyName="Triwulan" value="1" />
+            <InfoRow keyName="Periode" value="11/12/2022 - 22/12/2022" />
+            <InfoRow keyName="Object Audit" value="Object Audit A" />
+            <InfoRow keyName="Tim Audiot" value="Tim Warriors" />
+            <InfoRow keyName="Auditee" value="Auditee Kota A" />
+            <InfoRow keyName="Adendum" value="I" />
+        </div>
         </>)
     }
 
     return (<>
     
-        <div className="mx-8 mt-4 p-4 border border-blue-800 rounded-md text-blue-800">
+        <div className="cursor-pointer mx-8 mt-4 p-4 border border-blue-800 rounded-md text-blue-800 hover:bg-blue-50"
+        onClick={()=>{
+            setExpanded((state) => !state);
+        }}
+        >
             <div className="flex">
                 <span className='w-full float-left text-lg'>Information</span>
                 <Button className='bg-transparent px-3 py-1' onClick={()=>{

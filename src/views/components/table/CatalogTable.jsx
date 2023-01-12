@@ -9,16 +9,7 @@ const columns = [
     key: 'name',
     width: 50,
     fixed: 'left',
-    filters: [
-      {
-        text: 'Joe',
-        value: 'Joe',
-      },
-      {
-        text: 'John',
-        value: 'John',
-      },
-    ],
+    filterSearch: true,
     onFilter: (value, record) => record.name.indexOf(value) === 0,
   },
   {
@@ -82,7 +73,7 @@ const columns = [
     key: 'action',
     width: 20,
     fixed: 'right',
-    render: () => <a href="/documents/ewp"><IoMdOpen /></a>
+    render: () => <a href="/documents/ewp"><IoMdOpen className='text-blue-600' size={20} /></a>
   },
 ];
 const data = [];
@@ -107,14 +98,6 @@ const CatalogTable = () => (
     dataSource={data}
     bordered
     size="middle"
-    // scroll={{
-    //     x: 1500,
-    //     y: 300,
-    //   }}
-    // scroll={{
-    //   x: 'calc(700px + 50%)',
-    //   y: 240,
-    // }}
   />
 );
 export default CatalogTable;

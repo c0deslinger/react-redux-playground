@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux'
 import { logOut } from '../../store/ducks/auth/actions';
 import { compose } from "redux";
 import withAuth from "../routes/hoc/withAuth";
-import Catalog from '../components/modal/Catalog';
+import Catalog from '../components/modal/CatalogModal';
 import { useState } from 'react';
 import { Breadcrumb, Modal, Input } from 'antd';
 import {AiOutlineLogout} from 'react-icons/ai'
@@ -15,13 +15,6 @@ function DashboardPage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   let dispatch = useDispatch();
-
-//   <div style={{width: '100vw', height: '100vh', backgroundColor: '#ff0000'}}>
-//   <h1>Dashboard</h1>
-//   <button onClick={() => {
-//     dispatch(logOut())
-//   }}>Logout</button>
-// </div>
 
   return (
     // <div className="bg-slate-100 w-screen h-screen flex-b">
@@ -75,7 +68,7 @@ function DashboardPage() {
         </div>
       </div>
     </div>
-    <Modal width={1000} title="Catalog" open={isModalOpen} onCancel={() => {setIsModalOpen(false)} }>
+    <Modal width={1000} title="Catalog" open={isModalOpen} onCancel={() => {setIsModalOpen(false)}} footer={null}>
         <Catalog />
       </Modal>
   </div>

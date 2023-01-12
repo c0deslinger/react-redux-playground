@@ -3,6 +3,8 @@ import {  Button, Select } from "antd";
 import { Breadcrumb, DatePicker, Input} from 'antd';
 import InformationDocEwp from '../../components/document/InformationDocEwp';
 import DocumentEwpTable from '../../components/table/DocumentEwpTable';
+import { SearchOutlined } from '@ant-design/icons';
+
 
 const ListDocumentEwpPage = () => {
   return (
@@ -23,7 +25,11 @@ const ListDocumentEwpPage = () => {
                 <Input placeholder='Nama Dokumen' />
                 <DatePicker placeholder='Pilih Tanggal' />
                 <div>
-                <Button className='inline-block bg-blue-800 text-white'>Search</Button>
+                    <div className="bg-blue-800 hover:bg-blue-900 cursor-pointer px-5 py-2 rounded-md inline-flex items-center">
+                    <SearchOutlined className='text-white' />
+                    <span className='ml-2 text-white'>Search</span>
+                    </div>
+                {/* <Button className='inline-block items-center bg-blue-800 text-white'><SearchOutlined /> Search</Button> */}
                 </div>
                 <Select
                 placeholder="Sort By"
